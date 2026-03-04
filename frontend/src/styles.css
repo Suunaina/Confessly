@@ -1,0 +1,224 @@
+:root {
+  --bg: #f5f9ff;
+  --card: #ffffff;
+  --text: #1c1c1c;
+  --primary: #1877f2;
+  --border: #e6e6e6;
+}
+
+.dark-theme {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --primary: #3b82f6;
+  --border: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s ease;
+}
+
+.page-wrapper {
+  padding-top: 90px;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.nav-right button {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+
+/* CONTAINER */
+
+.container {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 40px;
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* CARD */
+
+.card {
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  background: var(--bg);
+  border-left: 4px solid var(--primary);
+}
+
+/* CARD FOOTER */
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* LIKE BUTTON */
+
+.like-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.like-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.like-btn.liked {
+  background: #ef4444;
+}
+
+.like-btn.liked:hover {
+  opacity: 0.9;
+}
+
+/* DELETE BUTTON */
+
+.delete-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
+}
+
+/* POST FORM */
+
+.page-title {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.post-form textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 16px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  font-size: 16px;
+  color: var(--text);
+  background: var(--bg);
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.post-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.1);
+}
+
+.post-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+}
+
+.post-bottom span {
+  color: var(--text);
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.post-bottom button {
+  padding: 10px 28px;
+  border-radius: 20px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.post-bottom button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+}
+
+.post-bottom button:active {
+  transform: translateY(0);
+}
