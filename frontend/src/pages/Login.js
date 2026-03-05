@@ -29,11 +29,9 @@ function Login() {
           { email, password }
         );
 
-        // Store token and role
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("role", res.data.role);
 
-        // Reload app
         window.location.href = "/";
       } else {
         await axios.post(
