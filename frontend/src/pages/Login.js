@@ -25,7 +25,7 @@ function Login() {
     try {
       if (isLogin) {
         const res = await axios.post(
-          "http://localhost:5000/api/auth/login",
+          "https://confessly-1.onrender.com/api/auth/login",
           { email, password }
         );
 
@@ -37,7 +37,7 @@ function Login() {
         window.location.href = "/";
       } else {
         await axios.post(
-          "https://confessly-backend.onrender.com",
+          "https://confessly-1.onrender.com/api/auth/register",
           { name, email, password }
         );
 
