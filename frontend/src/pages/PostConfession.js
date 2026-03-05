@@ -14,7 +14,7 @@ function PostConfession() {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:5000/api/confessions",
+        "https://confessly-backend.onrender.com",
         { text },
         {
           headers: {

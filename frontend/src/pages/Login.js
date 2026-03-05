@@ -37,7 +37,7 @@ function Login() {
         window.location.href = "/";
       } else {
         await axios.post(
-          "http://localhost:5000/api/auth/register",
+          "https://confessly-backend.onrender.com",
           { name, email, password }
         );
 
