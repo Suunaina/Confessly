@@ -13,6 +13,10 @@ app.use(express.json());
 const authRoutes = require("./routes/auth");
 const confessionRoutes = require("./routes/confessions");
 
+app.get('/',(req,res)=>{
+  res.send("Welcome to Backend")
+})
+
 app.use("/api/auth", authRoutes);
 app.use("/api/confessions", confessionRoutes);
 
